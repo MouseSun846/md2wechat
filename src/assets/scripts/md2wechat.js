@@ -1,6 +1,7 @@
 import { marked } from 'marked';
 import { WxRenderer } from './renderers/wx-renderer.js';
 import FuriganaMD from '../../libs/FuriganaMD.js';
+import { inlineCss } from './inline-css.js';
 
 function renderWeChat(source, wxRenderer) {
   let output = marked(source, { renderer: wxRenderer.getRenderer() });
@@ -15,4 +16,4 @@ function renderWeChat(source, wxRenderer) {
   return output;
 }
 
-export { renderWeChat, WxRenderer, FuriganaMD };
+export { renderWeChat, WxRenderer, FuriganaMD, inlineCss };

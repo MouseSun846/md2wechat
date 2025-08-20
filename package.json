@@ -20,6 +20,7 @@
   "exports": {
     ".": "./src/assets/scripts/md2wechat.js",
     "./renderer": "./src/assets/scripts/renderers/wx-renderer.js",
-    "./furigana": "./src/libs/FuriganaMD.js"
+    "./furigana": "./src/libs/FuriganaMD.js",
+    "./inline-css": "./src/assets/scripts/inline-css.js"
   }
 }

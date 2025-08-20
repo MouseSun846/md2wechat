@@ -1,4 +1,5 @@
 import { renderWeChat, WxRenderer } from './md2wechat.js';
+import { inlineCss } from './inline-css.js';
 
 function extractAllCSSRules() {
   let allCSS = "";
@@ -127,7 +128,7 @@ let app = new Vue({
     copy: function () {
       const oriHtml = document.getElementById("output").outerHTML;
 
-      const html = window.inlineCss(oriHtml, extractAllCSSRules());
+      const html = inlineCss(oriHtml, extractAllCSSRules());
 
       // 创建一个带有 HTML 的 ClipboardItem 对象
       var blob = new Blob([html], { type: "text/html" });

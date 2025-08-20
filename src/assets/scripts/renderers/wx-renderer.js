@@ -157,10 +157,12 @@ let WxRenderer = function () {
     };
     renderer.strong = function (text) {
       console.log('strong', text);
+      text=text.text
       return `<strong>${text}</strong>`;
     };
     renderer.em = function (text) {
       console.log('em', text);
+      text=text.text
       return `<em>${text}</em>`;
     };
     renderer.table = function (header, body) {
