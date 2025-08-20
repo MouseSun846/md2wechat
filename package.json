@@ -1,13 +1,25 @@
 {
+  "name": "md2wechat",
+  "version": "1.0.0",
+  "description": "A package to convert Markdown text to WeChat public account rich text format",
+  "main": "src/assets/scripts/editor.js",
   "scripts": {
     "start": "npm-run-all --parallel less serve",
     "less": "chokidar 'src/assets/less/**/*.less' -c 'lessc src/assets/less/themes/index.less src/assets/css/themes.css'",
     "serve": "serve src -p 8086"
+  },
+  "dependencies": {
+    "marked": "^0.7.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "less": "^4.2.0",
     "npm-run-all": "^4.1.5",
     "serve": "^14.2.3"
+  },
+  "exports": {
+    ".": "./src/assets/scripts/md2wechat.js",
+    "./renderer": "./src/assets/scripts/renderers/wx-renderer.js",
+    "./furigana": "./src/libs/FuriganaMD.js"
   }
 }

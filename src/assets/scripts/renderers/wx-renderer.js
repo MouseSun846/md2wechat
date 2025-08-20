@@ -1,3 +1,5 @@
+import FuriganaMD from '../../../libs/FuriganaMD.js';
+import { marked } from 'marked';
 let WxRenderer = function () {
   let ENV_USE_REFERENCES = true;
 
@@ -49,6 +51,8 @@ let WxRenderer = function () {
     FuriganaMD.register(renderer);
 
     renderer.heading = function (text, level) {
+      console.log('heading', text, level);
+      text = text.text
       switch (level) {
         case 1:
           return `<h1><span class="prefix"></span><span class="content">${text}</span><span class="suffix"></span></h1>`;
@@ -61,15 +65,21 @@ let WxRenderer = function () {
       }
     };
     renderer.paragraph = function (text) {
+      console.log('paragraph', text);
+    text = text.text
       if (text.indexOf("<figure>") === 0) {
         return text;
       }
       return `<p>${text}</p>`;
     };
     renderer.blockquote = function (text) {
+      console.log('blockquote', text);
+      text = text.text
       return `<blockquote class="important">${text}</blockquote>`;
     };
     renderer.code = function (text, infoString) {
+      console.log('code', text, infoString);
+      text = text.text
       text = text.replace(/</g, "&lt;");
       text = text.replace(/>/g, "&gt;");
 
@@ -97,16 +107,20 @@ let WxRenderer = function () {
       );
     };
     renderer.codespan = function (text, infoString) {
+      console.log('codespan', text, infoString);
+      text = text.text
       return `<code>${text}</code>`;
     };
     renderer.listitem = function (text) {
+      console.log('listitem', text);
+
       return `<span class="listitem"><span style="margin-right: 6px;"><%s/></span>${text}</span>`;
     };
     renderer.list = function (text, ordered, start) {
-      text = text.replace(/<\/*p.*?>/g, "");
-      let segments = text.split(`<%s/>`);
+      console.log('list', text, ordered, start);
+      
       if (!ordered) {
-        text = segments.join("•");
+         text = text.items.map(item => item.text).join("•");
         return `<section class="ul">${text}</section>`;
       }
       text = segments[0];
@@ -116,11 +130,13 @@ let WxRenderer = function () {
       return `<section class="ol">${text}</section>`;
     };
     renderer.image = function (href, title, text) {
+      console.log('image', href, title, text);
       const subText = `<figcaption>${text}</figcaption>`;
 
       return `<figure><img class="image" src="${href}" title="${title}" alt="${text}"/>${subText}</figure>`;
     };
     renderer.link = function (href, title, text) {
+      console.log('link', href, title, text);
       if (href.indexOf("https://mp.weixin.qq.com") === 0) {
         return `<a href="${href}" title="${
           title || text
@@ -140,15 +156,19 @@ let WxRenderer = function () {
       }
     };
     renderer.strong = function (text) {
+      console.log('strong', text);
       return `<strong>${text}</strong>`;
     };
     renderer.em = function (text) {
+      console.log('em', text);
       return `<em>${text}</em>`;
     };
     renderer.table = function (header, body) {
+      console.log('table', header, body);
       return `<table><thead>${header}</thead><tbody>${body}</tbody></table>`;
     };
     renderer.tablecell = function (text, flags) {
+      console.log('tablecell', text, flags);
       return `<td>${text}</td>`;
     };
     renderer.hr = function () {
@@ -157,3 +177,5 @@ let WxRenderer = function () {
     return renderer;
   };
 };
+
+export { WxRenderer };

@@ -1,3 +1,5 @@
+import { renderWeChat, WxRenderer } from './md2wechat.js';
+
 function extractAllCSSRules() {
   let allCSS = "";
 
@@ -104,16 +106,7 @@ let app = new Vue({
       });
     },
     renderWeChat: function (source) {
-      let output = marked(source, { renderer: this.wxRenderer.getRenderer() });
-      if (this.wxRenderer.hasFootnotes()) {
-        // 去除第一行的 margin-top
-        output = output.replace(/(style=".*?)"/, '$1;margin-top: 0"');
-        // 引用注脚
-        output += this.wxRenderer.buildFootnotes();
-        // 附加的一些 style
-        output += this.wxRenderer.buildAddition();
-      }
-      return output;
+      return renderWeChat(source, this.wxRenderer);
     },
     editorThemeChanged: function (editorTheme) {
       this.editor.setOption("theme", editorTheme);
