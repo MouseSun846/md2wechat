@@ -96,10 +96,10 @@ let WxRenderer = function () {
       return (
         `<section class="code-snippet__fix code-snippet__js">` +
         `<ul class="code-snippet__line-index code-snippet__js">${numbers.join(
-          ""
+          "\n"
         )}</ul>` +
         `<pre class="code-snippet__js" data-lang="${lang}">` +
-        codeLines.join("") +
+        codeLines.join("\n") +
         `</pre></section>`
       );
     };
