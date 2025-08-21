@@ -1,9 +1,9 @@
-import { marked } from 'marked';
+import * as marked from 'marked';
 import { WxRenderer } from './renderers/wx-renderer.js';
 import FuriganaMD from '../../libs/FuriganaMD.js';
 import { inlineCss } from './inline-css.js';
-
-function renderWeChat(source, wxRenderer) {
+const wxRenderer = new WxRenderer();
+function renderWeChat(source) {
   let output = marked(source, { renderer: wxRenderer.getRenderer() });
   if (wxRenderer.hasFootnotes()) {
     // 去除第一行的 margin-top

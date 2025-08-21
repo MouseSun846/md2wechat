@@ -46,99 +46,7 @@
     <!--应用主体-->
     <div id="app" class="container">
       <el-container>
-        <el-header class="top">
-          <a href="https://yanxi123.com/" title="阎曦的小站" target="_blank">
-            <el-avatar
-              :size="32"
-              src="assets/images/yanxi123.png"
-              class="web-icon"
-          /></a>
-          <div>
-            <span class="web-title">公众号 Markdown 编辑器 </span>
-          </div>
-          <el-form size="mini" class="ctrl" :inline="true">
-            <el-form-item label="编辑器主题">
-              <el-select
-                v-model="currentEditorTheme"
-                size="mini"
-                placeholder="选择字体"
-                @change="editorThemeChanged"
-              >
-                <el-option
-                  v-for="editorTheme in editorThemes"
-                  :key="editorTheme.value"
-                  :label="editorTheme.label"
-                  :value="editorTheme.value"
-                >
-                </el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="字体">
-              <el-select
-                v-model="currentFont"
-                size="mini"
-                placeholder="选择字体"
-              >
-                <el-option
-                  v-for="font in builtinFonts"
-                  :style="{fontFamily: font.value}"
-                  :key="font.value"
-                  :label="font.label"
-                  :value="font.value"
-                >
-                  <span class="select-item-left">{{ font.label }}</span>
-                  <span class="select-item-right">Abc</span>
-                </el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="主题">
-              <el-select
-                v-model="currentTheme"
-                size="mini"
-                placeholder="选择主题样式"
-              >
-                <el-option
-                  v-for="theme in themeOption"
-                  :key="theme.value"
-                  :label="theme.label"
-                  :value="theme.value"
-                >
-                  <span class="select-item-left">{{ theme.label }}</span>
-                  <span class="select-item-right">{{ theme.author }}</span>
-                </el-option>
-              </el-select>
-            </el-form-item>
-          </el-form>
-          <el-dropdown>
-            <span class="el-dropdown-link">
-              <el-button class="about">帮助</el-button>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item
-                ><el-link @click="aboutDialogVisible = true"
-                  >关于编辑器</el-link
-                >
-              </el-dropdown-item>
-              <el-dropdown-item
-                ><el-link href="https://yanxi123.com/" target="_blank"
-                  >阎曦的小站</el-link
-                ></el-dropdown-item
-              >
-              <el-dropdown-item
-                ><el-link @click="setMarkdownContent()"
-                  >MD示例: 编辑器介绍</el-link
-                ></el-dropdown-item
-              >
-              <el-dropdown-item
-                ><el-link
-                  href="https://www.coze.cn/store/plugin/7416025696356581414"
-                  target="_blank"
-                  >扣子 Coze 插件</el-link
-                ></el-dropdown-item
-              >
-            </el-dropdown-menu>
-          </el-dropdown>
-        </el-header>
+
         <el-main class="main-body">
           <el-row :gutter="10" class="main-section">
             <el-col :span="12">
@@ -196,8 +104,6 @@
             font-weight: 600;
           "
         >
-          <div>欢迎关注《高效开发》公众号</div>
-          <img src="./assets/images/wechat.jpg" style="max-width: 200px" />
         </div>
         <span slot="footer" class="dialog-footer">
           <el-button

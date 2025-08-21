@@ -923,7 +923,7 @@
 }
 .themes.qianduan h1 {
   text-align: center;
-  background-image: url(https://yanxi123.com/md2wechat/assets/images/mountain_2.webp);
+  background-image: url(../images/mountain_2.webp);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 95px;
@@ -939,7 +939,7 @@
 .themes.qianduan h2 {
   display: block;
   text-align: center;
-  background-image: url(https://yanxi123.com/md2wechat/assets/images/mountain_2.webp);
+  background-image: url(../images/mountain_2.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: initial;
@@ -967,7 +967,7 @@
 }
 .themes.qianduan h3:before {
   content: "";
-  background-image: url(https://yanxi123.com/md2wechat/assets/images/mountain_1.webp);
+  background-image: url(../images/mountain_1.webp);
   background-size: 15px 15px;
   display: inline-block;
   width: 15px;
@@ -1486,7 +1486,6 @@
 }
 .themes.menglv h1 {
   text-align: center;
-  background-image: url(http://img.xiaogangzai.cn/title_h1.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 75px;
@@ -1502,7 +1501,6 @@
 .themes.menglv h2 {
   display: block;
   text-align: center;
-  background-image: url(http://img.xiaogangzai.cn/title.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: initial;
@@ -1533,7 +1531,6 @@
 }
 .themes.menglv h3:before {
   content: "";
-  background-image: url(http://img.xiaogangzai.cn/title_h2.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: inline-block;
@@ -1660,7 +1657,6 @@
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-  background-image: url(https://imgkr.cn-bj.ufileos.com/15fdfb3c-b350-4da9-928e-5f8c506ec325.png);
   margin-bottom: -22px;
 }
 .themes.quanzhanlan h2 .content {
@@ -1703,7 +1699,6 @@
   width: 30px;
   height: 30px;
   display: block;
-  background-image: url(https://imgkr.cn-bj.ufileos.com/cdf294d0-6361-4af9-85e2-0913f0eb609b.png);
   background-position: center;
   background-size: 30px;
   margin: auto;
@@ -1718,7 +1713,6 @@
 }
 .themes.quanzhanlan h4 .content:before {
   content: "";
-  background-image: url(https://imgkr.cn-bj.ufileos.com/899e43b7-5a08-4ac6-aa00-1c45f169a65b.png);
   display: inline-block;
   height: 16px;
   background-size: 100%;
@@ -1800,7 +1794,6 @@
 }
 .themes.quanzhanlan figcaption:before {
   content: "";
-  background-image: url(https://yanxi123.com/md2wechat/assets/images/arrow-32-32.png);
   display: inline-block;
   width: 18px;
   height: 18px;
