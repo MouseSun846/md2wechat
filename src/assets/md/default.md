@@ -69,18 +69,18 @@ Markdown 是一种轻量级的「标记语言」，请阅读下方使用方法�
 
 例如：
 
-1. [这是一篇公众号文章](https://mp.weixin.qq.com/s/Y-VUFhY_2RFK6o0S8F0CuA)
+1. [这是一篇公众号文章](https://mp.weixin.qq.com/s/bycIgLST3BsOgkHbrI9A1A)
 
-2. [这是我的博客地址](https://yanxi123.com/)
+2. [这是我的博客地址](https://mp.weixin.qq.com/s/bycIgLST3BsOgkHbrI9A1A)
 
-3. [通过引号设置引用名](https://yanxi123.com/md2wechat/ "这是自定义的引用名")
+3. [通过引号设置引用名](https://mp.weixin.qq.com/s/bycIgLST3BsOgkHbrI9A1A "这是自定义的引用名")
 
 ### 2.7 图片
 
 接下来是一张图片。你可以用自己图床，也可以上传到微信媒体库再把图片 URL
 粘贴回来，或者编辑好以后，在公众号里插入图片。
 
-![这里可以写图片描述](https://yanxi123.com/post/2023/12/year-summary/img/20231231214441.png)
+![这里可以写图片描述](https://mmbiz.qpic.cn/mmbiz_png/2KeaxPyr9icUKQFNlnRiaWjj8hYzK8mYhOSXr42FCf3HiaPjnm2LWTDjCmpWuiawwtPCLuRiaolQVv1iaWRvFvogG1jw/640?wx_fmt=png&from=appmsg&wxfrom=13&tp=wxpic&watermark=1)
 
 如果使用图床链接的话，有可能复制后图片不能被上传，需要手动在微信重新上传替换。
 
